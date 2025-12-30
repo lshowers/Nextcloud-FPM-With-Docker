@@ -53,4 +53,4 @@ services:
 networks:
   nextcloud-fpm:
     external:
-      name: nginx-proxy
+      name: nginx
