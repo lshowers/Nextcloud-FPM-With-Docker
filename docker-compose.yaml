@@ -1,3 +1,5 @@
+name: nextcloud-bare
+
 services:
 
   web:
