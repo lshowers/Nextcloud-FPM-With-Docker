@@ -1,4 +1,5 @@
 services:
+
   web:
     image: nginx
     container_name: nextcloud_webserver
@@ -13,6 +14,7 @@ services:
     environment:
       - VIRTUAL_HOST={DOMAIN}
       - VIRTUAL_PORT=80
+      - VIRTUAL_NETWORK=nginx
       - LETSENCRYPT_HOST={DOMAIN}
       - LETSENCRYPT_EMAIL={DOMAIN@EMAIL}
     networks:
@@ -50,4 +52,3 @@ networks:
   nextcloud-fpm:
     external:
       name: nginx-proxy
-
